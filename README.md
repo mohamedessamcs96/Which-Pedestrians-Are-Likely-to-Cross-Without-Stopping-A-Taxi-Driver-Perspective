@@ -1,10 +1,10 @@
-# 🚖 Pedestrian Crossing Intention Detection
+#  Pedestrian Crossing Intention Detection
 ### From a Taxi Driver's Perspective — GIU Master's Thesis
 **Mohamed Essam** · German International University (GIU) · 2026
 
 ---
 
-## 🎯 Research Question
+##  Research Question
 
 > *Can a computer system replicate the split-second risk judgment an experienced Cairo taxi driver makes when approaching a pedestrian — predicting whether they will dart into traffic before the vehicle reaches them?*
 
@@ -12,7 +12,7 @@ This thesis compares three methods for predicting pedestrian crossing intention 
 
 ---
 
-## 📹 Step 1 — Dataset Recording
+##  Step 1 — Dataset Recording
 
 ### Equipment
 | Item | Details |
@@ -33,7 +33,7 @@ Mixed urban traffic — intersections, pedestrian crossings, roadside walkways. 
 
 ---
 
-## 🏷️ Step 2 — Annotation with CVAT
+##  Step 2 — Annotation with CVAT
 
 All video versions were uploaded to **CVAT (Computer Vision Annotation Tool)** for manual labeling.
 
@@ -72,7 +72,7 @@ For each pedestrian track, a human annotator assigned:
 
 ---
 
-## 🔬 Step 3 — Behavioral Augmentation
+##  Step 3 — Behavioral Augmentation
 
 To address class imbalance and improve model generalization, a **behavior-aware augmentation** strategy was applied to the annotation CSV:
 
@@ -84,7 +84,7 @@ This ensured the ML models were not biased by the majority class and learned gen
 
 ---
 
-## 🧠 Step 4 — Three Classification Methods
+##  Step 4 — Three Classification Methods
 
 ### Method 1 — Structured Annotation + Voting Ensemble (M1)
 - 9 demographic features label-encoded
@@ -107,7 +107,7 @@ This ensured the ML models were not biased by the majority class and learned gen
 
 ---
 
-## 🏃 Step 5 — LSTM Action Classifier
+##  Step 5 — LSTM Action Classifier
 
 To avoid running the expensive 3-model pipeline on everyone in the scene, a **Bidirectional LSTM** was trained to first classify each tracked pedestrian's motion:
 
@@ -123,7 +123,7 @@ To avoid running the expensive 3-model pipeline on everyone in the scene, a **Bi
 
 ---
 
-## 🎬 Step 6 — Full Video Pipeline
+##  Step 6 — Full Video Pipeline
 
 ```
 Input Video (iPhone 11 dashcam footage)
@@ -157,7 +157,7 @@ Annotated output video with per-person risk overlay
 ## 📁 Project Structure
 
 ```
-📦 project/
+ project/
 ├── 📓 Final_Thesis_Three_Method_Comparison.ipynb   ← Main thesis notebook
 ├── 📓 LSTM_Pedestrian_Action_Classifier.ipynb       ← LSTM training notebook
 ├── 📓 Pedestrian_Crossing_Video_Pipeline.ipynb      ← Full video pipeline
@@ -190,7 +190,7 @@ Annotated output video with per-person risk overlay
 
 ---
 
-## ⚙️ Setup & Requirements
+##  Setup & Requirements
 
 ### Install dependencies
 ```bash
@@ -202,7 +202,7 @@ pip install torch torchvision ultralytics transformers sentence-transformers \
 ### Models — download from Google Drive
 Place all files from the Drive link into your `models/` folder:
 
-> 📎 **[Download models folder → Google Drive](#)**
+>  **[Download models folder → Google Drive](#)**
 > *(replace with your actual Drive link)*
 
 ### OpenAI API Key
@@ -217,7 +217,7 @@ OPENAI_API_KEY = 'your-api-key-here'
 
 ---
 
-## 🗂️ Dataset
+##  Dataset
 
 | Property | Value |
 |---|---|
@@ -233,7 +233,7 @@ OPENAI_API_KEY = 'your-api-key-here'
 
 ---
 
-## 🔑 External APIs Used
+##  External APIs Used
 
 | API | Purpose | Requires key |
 |---|---|---|
@@ -245,19 +245,19 @@ OPENAI_API_KEY = 'your-api-key-here'
 
 ---
 
-## 📊 Results
+##  Results
 
 | Method | Accuracy | F1 (Weighted) | Annotation needed |
 |---|---|---|---|
-| M1 — Ensemble ML | — | — | ✅ Yes |
-| M2 — RoBERTa | — | — | ✅ Yes |
-| M3 — GPT-4o Vision | — | — | ❌ No |
+| M1 — Ensemble ML | — | — |  Yes |
+| M2 — RoBERTa | — | — |  Yes |
+| M3 — GPT-4o Vision | — | — |  No |
 
 *Run the Conclusion cell in the main notebook to populate with your actual numbers.*
 
 ---
 
-## 👤 Author
+##  Author
 
 **Mohamed Essam**
 Master's Thesis — German International University (GIU)
