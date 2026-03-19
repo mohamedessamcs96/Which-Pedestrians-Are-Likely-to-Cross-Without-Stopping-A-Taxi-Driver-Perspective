@@ -199,11 +199,11 @@ pip install torch torchvision ultralytics transformers sentence-transformers \
             matplotlib seaborn
 ```
 
-### Models — download from Google Drive
+### Dataset — download from Google Drive
 Place all files from the Drive link into your `models/` folder:
 
->  **[Download models folder → Google Drive](#)**
-> *(replace with your actual Drive link)*
+>  **[Download dataset folder → Google Drive](#)**
+> *(https://drive.google.com/drive/folders/1K35wYGlgF3RFCsmluktoAfiXEtATweGl?usp=drive_link)*
 
 ### OpenAI API Key
 In Cell 5 of the main notebook, replace:
@@ -237,9 +237,9 @@ OPENAI_API_KEY = 'your-api-key-here'
 
 | API | Purpose | Requires key |
 |---|---|---|
-| `gpt-4o` | Pedestrian risk description (taxi driver prompt) | ✅ OpenAI |
-| `text-embedding-3-large` | 3072-dim embedding for M3 | ✅ OpenAI |
-| `all-roberta-large-v1` | 768-dim embedding for M2 | ❌ Free / local |
+| `gpt-4o` | Pedestrian risk description (taxi driver prompt) |  OpenAI |
+| `text-embedding-3-large` | 3072-dim embedding for M3 | OpenAI |
+| `all-roberta-large-v1` | 768-dim embedding for M2 |  Free / local |
 
 > ⚠️ GPT-4o calls are cached in `.pkl` files after the first run — re-running the notebook will not incur additional API costs as long as the cache files are present.
 
