@@ -1,0 +1,63 @@
+{
+  "project": "Pedestrian Crossing Intention Detection \u2014 GIU Thesis",
+  "author": "Mohamed Essam",
+  "framework": "Taxi Driver Risk Assessment",
+  "lstm_classes": [
+    "Walking",
+    "Standing",
+    "Crossing"
+  ],
+  "target_classes": [
+    "crossed",
+    "waited"
+  ],
+  "ann_cols": [
+    "age",
+    "gender",
+    "dresscodestyle",
+    "distracted",
+    "judgmentcalls",
+    "relativeposition",
+    "location",
+    "fashionpersonality",
+    "weight"
+  ],
+  "models": [
+    {
+      "file": "lstm_action_classifier.pth",
+      "description": "Bidirectional LSTM \u2014 Walking/Standing/Crossing"
+    },
+    {
+      "file": "m1_voting_ensemble.pkl",
+      "description": "M1 \u2014 Voting Ensemble (RF+GBM+SVM) on annotation features"
+    },
+    {
+      "file": "m1_scaler.pkl",
+      "description": "M1 \u2014 StandardScaler for annotation features"
+    },
+    {
+      "file": "m1_label_encoders.pkl",
+      "description": "M1 \u2014 LabelEncoders for each annotation column"
+    },
+    {
+      "file": "m2_roberta_mlp.pkl",
+      "description": "M2 \u2014 MLP classifier on RoBERTa 768-dim embeddings"
+    },
+    {
+      "file": "m2_scaler_pca.pkl",
+      "description": "M2 \u2014 StandardScaler + PCA for RoBERTa embeddings"
+    },
+    {
+      "file": "m3_gpt4o_rf.pkl",
+      "description": "M3 \u2014 Random Forest on GPT-4o 3072-dim embeddings"
+    },
+    {
+      "file": "m3_scaler_pca.pkl",
+      "description": "M3 \u2014 StandardScaler + PCA for GPT-4o embeddings"
+    },
+    {
+      "file": "target_label_encoder.pkl",
+      "description": "LabelEncoder \u2014 crossed / waited target classes"
+    }
+  ]
+}
