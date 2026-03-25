@@ -263,4 +263,3 @@ OPENAI_API_KEY = 'your-api-key-here'
 Master's Thesis — German International University (GIU)
 Faculty of Engineering & Applied Sciences
 Cairo, Egypt · 2026
-# Which-Pedestrians-Are-Likely-to-Cross-Without-Stopping-A-Taxi-Driver-Perspective
