@@ -202,7 +202,7 @@ pip install torch torchvision ultralytics transformers sentence-transformers \
 ### Dataset — download from Google Drive
 Place all files from the Drive link into your `models/` folder:
 
->  **[Download dataset folder → Google Drive](#)**
+>  **[Download dataset folder → Google Drive](https://drive.google.com/drive/folders/1K35wYGlgF3RFCsmluktoAfiXEtATweGl?usp=drive_link)**
 > *(https://drive.google.com/drive/folders/1K35wYGlgF3RFCsmluktoAfiXEtATweGl?usp=drive_link)*
 
 ### OpenAI API Key
@@ -247,13 +247,13 @@ OPENAI_API_KEY = 'your-api-key-here'
 
 ##  Results
 
-| Method | Accuracy | F1 (Weighted) | Annotation needed |
+| Method | Accuracy | F1 (weighted) | Annotation needed |
 |---|---|---|---|
-| M1 — Ensemble ML | — | — |  Yes |
-| M2 — RoBERTa | — | — |  Yes |
-| M3 — GPT-4o Vision | — | — |  No |
+| M1: Voting ensemble (RF + GBM + SVM) | **83.33%** | **83.22%** | Yes |
+| M2: RoBERTa embeddings + MLP | 79.33% | 78.96% | Yes |
+| M3: GPT-4o Vision | 67.33% | 67.51% | No |
 
-*Run the Conclusion cell in the main notebook to populate with your actual numbers.*
+The LSTM action classifier reaches **86.2%** validation accuracy.
 
 ---
 
